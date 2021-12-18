@@ -1,0 +1,17 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Models\Traits\HasUuid;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+
+class {{ class }} extends Model
+{
+    use HasUuid;
+    use HasFactory;
+    use SoftDeletes;
+
+    protected $guarded = [];
+}
