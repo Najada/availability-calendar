@@ -34,5 +34,6 @@
             </main>
         </div>
         @livewireScripts
+        @livewireCalendarScripts
     </body>
 </html>
