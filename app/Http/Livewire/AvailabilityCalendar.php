@@ -11,7 +11,7 @@ class AvailabilityCalendar extends LivewireCalendar
     public function events(): Collection
     {
 
-        return Event::whereDate('date', '>=', $this->gridStartsAt)
+        return auth()->user()->events()->whereDate('date', '>=', $this->gridStartsAt)
             ->whereDate('date', '<=', $this->gridEndsAt)
             ->get()
             ->map(function (Event $model) {
