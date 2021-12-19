@@ -12,15 +12,19 @@ class CheckUserAvailability extends Component
     public function submit()
     {
         $event = auth()->user()->events()->where('date', $this->date)->first();
-        if ($event) {
-            if (auth()->user()->is_available) {
+        $eventExists = $event !== null;
+        if (auth()->user()->is_available) {
+            if ($eventExists) {
                 $this->isAvailable = false;
             } else {
                 $this->isAvailable = true;
             }
-        }
-        else {
-            $this->isAvailable = false;
+        } else {
+            if ($eventExists) {
+                $this->isAvailable = true;
+            } else {
+                $this->isAvailable = false;
+            }
         }
     }
 
