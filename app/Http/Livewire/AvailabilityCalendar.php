@@ -17,8 +17,6 @@ class AvailabilityCalendar extends LivewireCalendar
             ->map(function (Event $model) {
                 return [
                     'id' => $model->id,
-                    // 'title' => 'title',
-                    // 'description' => 'notes',
                     'date' => $model->date,
                 ];
             });
@@ -43,5 +41,13 @@ class AvailabilityCalendar extends LivewireCalendar
                 'date' => "{$year}-{$month}-{$day}"
             ]);
         }
+    }
+
+    public function render()
+    {
+        return parent::render()->with([
+            'dayColor' => auth()->user()->is_available ? 'green' : 'red' ,
+            'eventColor' => auth()->user()->is_available ? 'red' : 'green' 
+        ]);
     }
 }

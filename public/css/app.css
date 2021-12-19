@@ -1170,11 +1170,17 @@ select {
 .events {
     position: absolute;
     top:0;
-    background:red;
+   
     height:100%;
     width:100%;
     z-index:8;
     left:0;
+}
+.events--green {
+    background:green;
+}
+.events--red {
+    background:red;
 }
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;

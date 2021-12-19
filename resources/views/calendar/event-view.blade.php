@@ -12,6 +12,6 @@
     </p>
 </div> --}}
 
-<div class="events">
+<div class="events events--{{$eventColor}}">
 
 </div>
