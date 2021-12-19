@@ -30,6 +30,16 @@ class AvailabilityCalendar extends LivewireCalendar
         $this->calculateGridStartsEnds();
     }
 
+    public function updateDefaultAvailability($availability)
+    {
+        $user = auth()->user();
+        if ($user->is_available !== $availability) {
+
+            $user->is_available = $availability;
+            $user->save();
+            $user->events()->delete();
+        }
+    }
 
     public function onDayClick($year, $month, $day)
     {
@@ -46,8 +56,8 @@ class AvailabilityCalendar extends LivewireCalendar
     public function render()
     {
         return parent::render()->with([
-            'dayColor' => auth()->user()->is_available ? 'green' : 'red' ,
-            'eventColor' => auth()->user()->is_available ? 'red' : 'green' 
+            'dayColor' => auth()->user()->is_available ? 'green' : 'red',
+            'eventColor' => auth()->user()->is_available ? 'red' : 'green'
         ]);
     }
 }

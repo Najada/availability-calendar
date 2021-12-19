@@ -5,6 +5,11 @@
         wire:poll.{{ $pollMillis }}ms
     @endif
 >
+<div>
+    <a href="" class="text-blue-500">Mark as Available</a>
+
+    <a href=""></a>
+</div>
     <div>
         @includeIf($beforeCalendarView)
     </div>
