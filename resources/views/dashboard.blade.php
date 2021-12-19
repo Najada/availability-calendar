@@ -16,7 +16,6 @@
                     event-view="calendar/event-view"
                     before-calendar-view="calendar/before-calendar-view"
                     />
-
                 </div>
             </div>
         </div>

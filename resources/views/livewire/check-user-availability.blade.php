@@ -35,5 +35,4 @@
         <button type="submit">Check availability</button>
     </form>
     <br>
-
 </div>
