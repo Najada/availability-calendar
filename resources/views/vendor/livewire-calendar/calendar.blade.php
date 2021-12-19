@@ -7,9 +7,9 @@
 >
 
 <div>
-    <a  wire:click="updateDefaultAvailability(1)" class="default-settings default-settings--available text-blue-500 underline decoration-solid">I am available all off the time</a>
+    <a  wire:click="updateDefaultAvailability(1)" class="default-settings text-blue-500 underline decoration-solid">I am available all off the time</a>
 
-    <a  wire:click="updateDefaultAvailability(0)" class="default-settings default-settings--not-available text-blue-500 underline decoration-solid text-red-900">I am available none of the time</a>
+    <a  wire:click="updateDefaultAvailability(0)" class="default-settings text-blue-500 underline decoration-solid text-red-900">I am available none of the time</a>
 
 </div>
     <div>

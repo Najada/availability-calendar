@@ -36,15 +36,8 @@
     color: white;
     display: block;
     border-radius: 4px;
-    width: auto;
+    width: fit-content;
     margin-bottom: 10px;
     cursor: pointer;
-}
-
-.default-settings--available {
-    background-color: green;
-}
-
-.default-settings--not-available {
-    background-color: red;
+    background-color:cornflowerblue ;
 }

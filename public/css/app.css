@@ -1199,15 +1199,12 @@ select {
     color: white;
     display: block;
     border-radius: 4px;
-    width: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     margin-bottom: 10px;
     cursor: pointer;
-}
-.default-settings--available {
-    background-color: green;
-}
-.default-settings--not-available {
-    background-color: red;
+    background-color:cornflowerblue ;
 }
 .hover\:border-gray-300:hover {
   --tw-border-opacity: 1;
@@ -1418,3 +1415,4 @@ select {
     padding-right: 2rem;
   }
 }
+

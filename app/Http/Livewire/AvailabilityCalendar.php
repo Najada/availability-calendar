@@ -33,7 +33,7 @@ class AvailabilityCalendar extends LivewireCalendar
     public function updateDefaultAvailability($availability)
     {
         $user = auth()->user();
-        if ($user->is_available !== $availability) {
+        if ($user->is_available !== $availability || $user->events->count()) {
 
             $user->is_available = $availability;
             $user->save();
