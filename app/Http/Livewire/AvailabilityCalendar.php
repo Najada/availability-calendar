@@ -17,8 +17,8 @@ class AvailabilityCalendar extends LivewireCalendar
             ->map(function (Event $model) {
                 return [
                     'id' => $model->id,
-                    'title' => 'title',
-                    'description' => 'notes',
+                    // 'title' => 'title',
+                    // 'description' => 'notes',
                     'date' => $model->date,
                 ];
             });
